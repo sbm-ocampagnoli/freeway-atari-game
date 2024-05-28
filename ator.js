@@ -1,6 +1,7 @@
-let xAtor = 100;
+let xAtor = 85;
 let yAtor = 366;
 let colisao = false;
+let meusPontos = 0;
 
 function mostraAtor() {
     image(imagemDoAtor, xAtor, yAtor, 30, 30);
@@ -30,4 +31,18 @@ function verificaColisao() {
 
 function colidiu() {
     yAtor = 366;
+}
+
+function incluiPontos() {
+    textAlign(CENTER);
+    textSize(32);
+    fill(color(204, 0, 204));
+    text(meusPontos, width / 5, 28);
+}
+
+function marcarPonto() {
+    if (yAtor == 3) {
+        meusPontos += 1;
+        yAtor = 366;
+    }
 }
