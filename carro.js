@@ -12,9 +12,9 @@ let xCarro03 = xPosicaoInicial;
 
 
 function mostraCarro() {
-    image(imagemCarro01, xCarros[0], yCarros[0], 50, 40);
-    image(imagemCarro02, xCarros[1], yCarros[1], 50, 40);
-    image(imagemCarro03, xCarros[2], yCarros[2], 50, 40);
+    for (let i = 0; i < imagemCarros.length; i++) {
+        image(imagemCarros[i], xCarros[i], yCarros[i], 50, 40);
+    }
 }
 
 function movimentaCarro() {
