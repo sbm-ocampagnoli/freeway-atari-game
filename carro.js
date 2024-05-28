@@ -18,19 +18,21 @@ function mostraCarro() {
 }
 
 function movimentaCarro() {
-    xCarros[0] -= velocidadeCarros[0];
-    xCarros[1] -= velocidadeCarros[1];
-    xCarros[2] -= velocidadeCarros[2];
+    for (let i = 0; i < xCarros.length; i++) {
+        xCarros[i] -= velocidadeCarros[i];
+    }
 }
 
 function voltaPosicaoInicialDoCarro() {
-    if (xCarros[0] < -50) {
-        xCarros[0] = xPosicaoInicial;
+
+    for (let i = 0; i < xCarros.length; i++) {
+        if (passouTodaTela(i)) {
+            xCarros[i] = xPosicaoInicial;
+        }
     }
-    if (xCarros[1] < -50) {
-        xCarros[1] = xPosicaoInicial;
-    }
-    if (xCarros[2] < -50) {
-        xCarros[2] = xPosicaoInicial;
-    }
+}
+
+
+function passouTodaTela(carro) {
+    return xCarros[carro] < -50;
 }
