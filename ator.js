@@ -12,7 +12,10 @@ function movimentaAtor() {
         yAtor -= 3;
     }
     if (keyIsDown(DOWN_ARROW)) {
-        yAtor += 3;
+        if (podeMovimentar()) {
+            yAtor += 3;
+        }
+
     }
 }
 
@@ -24,6 +27,9 @@ function verificaColisao() {
 
         if (colisao) {
             colidiu();
+            if (podePerderPontos()) {
+                meusPontos -= 1;
+            }
         }
 
     }
@@ -45,4 +51,12 @@ function marcarPonto() {
         meusPontos += 1;
         yAtor = 366;
     }
+}
+
+function podePerderPontos() {
+    return meusPontos > 0;
+}
+
+function podeMovimentar() {
+    return yAtor < 366;
 }

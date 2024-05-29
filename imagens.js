@@ -12,4 +12,4 @@ function preload() {
     imagemCarro02 = loadImage("./imagens/carro-2.png");
     imagemCarro03 = loadImage("./imagens/carro-3.png");
     imagemCarros = [imagemCarro01, imagemCarro02, imagemCarro03, imagemCarro01, imagemCarro03, imagemCarro02];
-}
+}   
