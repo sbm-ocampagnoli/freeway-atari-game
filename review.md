@@ -47,3 +47,16 @@ function verificaColisao() {
 - **Divisão de responsabilidade**:
   - Para cada personagem, cenário, e imagens, foi criado um arquivo `.js` separado;
   - Isso ajuda muito na organização do código para o desenvolvimento do projeto.
+
+### Manipulação de Áudio
+
+- Podemos utilizar a função `loadSound('caminhoDoArquivo');`
+
+```javascript
+let somDePontuacao = loadSound('./sons/pontos.mp3');
+```
+
+- Ou podemos criar um objeto chamado `Audio`.
+  - `.loop` faz com que o áudio sempre fique tocando;
+  - `.volume` para modificar o volume do áudio;
+  - `.play()` para tocar o áudio.
