@@ -1,5 +1,7 @@
+let canvas;
+
 function setup() {
-    createCanvas(500, 400);
+    canvas = createCanvas(500, 400);
 }
 
 function draw() {
@@ -12,4 +14,18 @@ function draw() {
     verificaColisao();
     incluiPontos();
     marcarPonto();
+    centralizaCanvas();
+    tocarSomDeTrilha();
+}
+
+function centralizaCanvas() {
+
+    canvas.position((windowWidth - width) / 2, (windowHeight - height) / 2);
+
+}
+
+function windowResized() {
+
+    centralizaCanvas();
+
 }
