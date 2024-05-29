@@ -15,6 +15,7 @@ function draw() {
     incluiPontos();
     marcarPonto();
     centralizaCanvas();
+    tocarSomDeTrilha();
 }
 
 function centralizaCanvas() {

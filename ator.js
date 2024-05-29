@@ -27,6 +27,7 @@ function verificaColisao() {
 
         if (colisao) {
             colidiu();
+            tocarSomDeColisao();
             if (podePerderPontos()) {
                 meusPontos -= 1;
             }
@@ -50,6 +51,7 @@ function marcarPonto() {
     if (yAtor == 3) {
         meusPontos += 1;
         yAtor = 366;
+        tocarSomDePontuacao();
     }
 }
 
